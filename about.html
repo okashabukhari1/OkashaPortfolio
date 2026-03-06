@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Okasha Bukhari — Full Stack Developer, Karachi | Aptech Student</title>
+  <!-- ══ PRIMARY SEO ═══════════════════════════════════════════════ -->
+  <meta name="description" content="Learn about Okasha Bukhari — a full stack developer from Karachi studying at Aptech. Skilled in PHP, Laravel, MySQL, HTML, CSS, JavaScript and Bootstrap. Started 2025.">
+  <meta name="keywords" content="about Okasha Bukhari, PHP Laravel MySQL developer Karachi, Aptech student developer, full stack developer biography, hire web developer Pakistan">
+  <meta name="author" content="Okasha Bukhari">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://okashabukhari1.github.io/about.html">
+
+  <!-- ══ OPEN GRAPH ════════════════════════════════════════════════ -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Okasha Bukhari — Full Stack Developer">
+  <meta property="og:title" content="About Okasha Bukhari — Full Stack Developer, Karachi | Aptech">
+  <meta property="og:description" content="Full stack developer from Karachi studying at Aptech. Started 2025. Learn about his journey, skills and services.">
+  <meta property="og:image" content="https://okashabukhari1.github.io/Okasha.jpeg">
+  <meta property="og:image:alt" content="Okasha Bukhari — Full Stack Developer from Karachi, Pakistan">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+  <meta property="og:url" content="https://okashabukhari1.github.io/about.html">
+  <meta property="og:locale" content="en_US">
+
+  <!-- ══ TWITTER CARD ══════════════════════════════════════════════ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Okasha Bukhari — Full Stack Developer, Karachi | Aptech">
+  <meta name="twitter:description" content="Full stack developer from Karachi studying at Aptech. Started 2025. Learn about his journey, skills and services.">
+  <meta name="twitter:image" content="https://okashabukhari1.github.io/Okasha.jpeg">
+  <meta name="twitter:image:alt" content="Okasha Bukhari — Full Stack Developer">
+
+  <!-- ══ JSON-LD STRUCTURED DATA ══════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://okashabukhari1.github.io/#person",
+        "name": "Okasha Bukhari",
+        "jobTitle": "Full Stack Developer",
+        "description": "Full stack developer from Karachi, Pakistan. Studying at Aptech. Building with PHP, Laravel, MySQL, HTML, CSS, JavaScript and Bootstrap.",
+        "url": "https://okashabukhari1.github.io",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://okashabukhari1.github.io/Okasha.jpeg",
+          "width": 800,
+          "height": 800
+        },
+        "email": "okashabukhari295@gmail.com",
+        "telephone": "+92-327-270-7981",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Karachi",
+          "addressRegion": "Sindh",
+          "addressCountry": "PK"
+        },
+        "sameAs": [
+          "https://github.com/okashabukhari1",
+          "https://www.instagram.com/okasha_bukhari1/"
+        ],
+        "knowsAbout": ["HTML5","CSS3","JavaScript","Bootstrap 5","PHP","Laravel","MySQL","Responsive Web Design","Git","GitHub","REST APIs"],
+        "hasOccupation": {
+          "@type": "Occupation",
+          "name": "Full Stack Developer",
+          "occupationLocation": { "@type": "Country", "name": "Pakistan" }
+        }
+      },
+      {
+        "@type": "AboutPage",
+        "@id": "https://okashabukhari1.github.io/about.html",
+        "name": "About Okasha Bukhari",
+        "url": "https://okashabukhari1.github.io/about.html",
+        "isPartOf": { "@id": "https://okashabukhari1.github.io/#website" },
+        "about": { "@id": "https://okashabukhari1.github.io/#person" }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://okashabukhari1.github.io/#website",
+        "name": "Okasha Bukhari Portfolio",
+        "url": "https://okashabukhari1.github.io",
+        "description": "Portfolio of Okasha Bukhari — full stack developer from Karachi using PHP, Laravel, MySQL, HTML, CSS, JavaScript and Bootstrap.",
+        "author": { "@id": "https://okashabukhari1.github.io/#person" }
+      }
+    ]
+  }
+  </script>
+
+  <!-- ══ PERFORMANCE HINTS ══════════════════════════════════════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="shared.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    /* ── About grid ─────────────────────────────────────────────── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 72px;
+      align-items: start;
+    }
+
+    .about-card-wrap {
+      position: sticky;
+      top: 110px;
+    }
+
+    .acard {
+      border-radius: 20px;
+      padding: 0;
+      overflow: hidden;
+      background: linear-gradient(160deg, #0a1628, #0d1f3c);
+      border: 1px solid var(--border);
+      box-shadow: 0 0 60px rgba(0, 212, 255, .1);
+      position: relative;
+    }
+
+    .acard-top {
+      padding: 48px 32px 36px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      background: radial-gradient(circle at 50% 0%, rgba(0, 212, 255, .08), transparent 60%);
+    }
+
+    .acard-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto 18px;
+      box-shadow: 0 0 36px rgba(0, 212, 255, .4);
+      animation: float-av 4s ease-in-out infinite;
+    }
+
+    .acard-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    @keyframes float-av {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(-10px)
+      }
+    }
+
+    .acard-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .acard-role {
+      font-size: .74rem;
+      color: var(--cyan);
+      font-weight: 600;
+      letter-spacing: .05em;
+      margin-bottom: 16px;
+    }
+
+    .acard-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(0, 212, 255, .08);
+      border: 1px solid rgba(0, 212, 255, .2);
+      border-radius: 100px;
+      padding: 5px 14px;
+      font-size: .68rem;
+      font-weight: 700;
+      color: var(--cyan);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .acard-badge i {
+      font-size: .65rem;
+      color: #4ade80;
+    }
+
+    .acard-bottom {
+      padding: 24px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .acard-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: .78rem;
+    }
+
+    .acard-row:last-child {
+      border-bottom: none;
+    }
+
+    .acard-row i {
+      color: var(--cyan);
+      font-size: 1rem;
+      width: 18px;
+      flex-shrink: 0;
+    }
+
+    .acard-key {
+      color: var(--muted);
+      min-width: 76px;
+    }
+
+    .acard-val {
+      color: var(--text);
+      font-weight: 500;
+      font-size: .76rem;
+    }
+
+    .acard-val a {
+      color: var(--cyan);
+    }
+
+    .about-text {}
+
+    .about-text h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 700;
+      letter-spacing: -.025em;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .about-text h2 em {
+      font-style: italic;
+      color: var(--cyan);
+    }
+
+    .about-text p {
+      font-size: .88rem;
+      color: var(--muted);
+      line-height: 1.92;
+      margin-bottom: 18px;
+    }
+
+    .about-text p strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .about-text p:last-of-type {
+      margin-bottom: 36px;
+    }
+
+    /* Timeline */
+    .timeline-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 24px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+      margin-bottom: 52px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 14px;
+      top: 8px;
+      bottom: 8px;
+      width: 1px;
+      background: linear-gradient(180deg, var(--cyan), rgba(0, 212, 255, .1));
+    }
+
+    .tl-item {
+      display: flex;
+      gap: 28px;
+      padding: 0 0 32px;
+    }
+
+    .tl-dot {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--dark3);
+      border: 2px solid var(--cyan);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--cyan);
+      font-size: .72rem;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 0 12px rgba(0, 212, 255, .25);
+    }
+
+    .tl-body {}
+
+    .tl-year {
+      font-size: .66rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 6px;
+    }
+
+    .tl-head {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: .95rem;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .tl-sub {
+      font-size: .76rem;
+      color: var(--muted);
+    }
+
+    /* Services section on about page */
+    #services {
+      border-top: 1px solid var(--border);
+      background: rgba(10, 22, 40, .4);
+    }
+
+    .svc-full-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .svc-full-card {
+      padding: 32px;
+    }
+
+    .svc-full-card .icon-box {
+      margin-bottom: 20px;
+    }
+
+    .svc-full-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: .98rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .svc-full-desc {
+      font-size: .78rem;
+      color: var(--muted);
+      line-height: 1.82;
+      margin-bottom: 20px;
+    }
+
+    .svc-full-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .svc-full-list li {
+      font-size: .75rem;
+      color: var(--muted);
+      display: flex;
+      gap: 9px;
+      align-items: center;
+      transition: color .2s;
+    }
+
+    .svc-full-list li i {
+      color: var(--cyan);
+      font-size: .76rem;
+      flex-shrink: 0;
+    }
+
+    .card:hover .svc-full-list li {
+      color: var(--text);
+    }
+
+    @media(max-width:900px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .about-card-wrap {
+        position: static;
+      }
+
+      .svc-full-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-bg"></div>
+  <div id="cur"></div>
+  <div id="cur-ring"></div>
+  <div id="cur-arms"></div>
+
+  <nav>
+    <div class="nav-logo">Okasha Bukhari</div>
+    <div class="nav-links">
+      <a href="index.html"><i class="bi bi-house"></i> Home</a>
+      <a href="about.html" class="active"><i class="bi bi-person"></i> About</a>
+      <a href="skills.html"><i class="bi bi-lightning"></i> Skills</a>
+      <a href="projects.html"><i class="bi bi-grid-3x3-gap"></i> Projects</a>
+      <a href="contact.html"><i class="bi bi-envelope"></i> Contact</a>
+    </div>
+    <a href="mailto:okashabukhari295@gmail.com" class="nav-cta"><i class="bi bi-download"></i> Download CV</a>
+    <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mob-menu" id="mobMenu">
+    <a href="index.html"><i class="bi bi-house"></i> Home</a>
+    <a href="about.html" class="active"><i class="bi bi-person"></i> About</a>
+    <a href="skills.html"><i class="bi bi-lightning"></i> Skills</a>
+    <a href="projects.html"><i class="bi bi-grid-3x3-gap"></i> Projects</a>
+    <a href="contact.html"><i class="bi bi-envelope"></i> Contact</a>
+  </div>
+
+  <div class="page-header">
+    <div class="page-header-grid"></div>
+    <div class="container">
+      <div class="page-header-label"><i class="bi bi-person-lines-fill"></i> Who I Am</div>
+      <h1>About <span>Okasha Bukhari</span> — Full Stack Developer, Karachi</h1>
+      <p>A full stack developer from Karachi, studying at Aptech — started this journey in 2025.</p>
+    </div>
+  </div>
+
+  <section class="section" style="border-top:1px solid var(--border)">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- LEFT CARD -->
+        <div class="about-card-wrap reveal">
+          <div class="acard">
+            <div class="acard-top">
+              <div class="acard-avatar">
+                <img src="Okasha.jpeg" alt="Okasha Bukhari — Full Stack Developer from Karachi, Pakistan" loading="eager" width="300" height="360">
+              </div>
+              <div class="acard-name">Okasha Bukhari</div>
+              <div class="acard-role">Full Stack Developer</div>
+              <div class="acard-badge"><i class="bi bi-circle-fill"></i> Available for Work</div>
+            </div>
+            <div class="acard-bottom">
+              <div class="acard-row"><i class="bi bi-geo-alt"></i><span class="acard-key">Location</span><span
+                  class="acard-val">Karachi, Pakistan</span></div>
+              <div class="acard-row"><i class="bi bi-envelope"></i><span class="acard-key">Email</span><span
+                  class="acard-val"><a href="mailto:okashabukhari295@gmail.com">okashabukhari295@gmail.com</a></span>
+              </div>
+              <div class="acard-row"><i class="bi bi-telephone"></i><span class="acard-key">Phone</span><span
+                  class="acard-val">+92 327 270 7981</span></div>
+              <div class="acard-row"><i class="bi bi-github"></i><span class="acard-key">GitHub</span><span
+                  class="acard-val"><a href="https://github.com/okashabukhari1"
+                    target="_blank" rel="noopener noreferrer">okashabukhari1</a></span></div>
+              <div class="acard-row"><i class="bi bi-translate"></i><span class="acard-key">Languages</span><span
+                  class="acard-val">English, Urdu</span></div>
+              <div class="acard-row"><i class="bi bi-briefcase"></i><span class="acard-key">Status</span><span
+                  class="acard-val" style="color:var(--cyan)">Open to Hire</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT TEXT -->
+        <div class="about-text reveal rd1">
+          <div class="sec-label">My Story</div>
+          <h2>Get to <em>know</em> Okasha Bukhari</h2>
+          <p>I'm <strong>Okasha Bukhari</strong>, a full stack developer based in Karachi, Pakistan. I started my journey in <strong>2025</strong> by enrolling at <strong>Aptech</strong>, where I'm building a solid foundation across the full stack — <strong>HTML, CSS, JavaScript</strong> and <strong>Bootstrap</strong> on the frontend, and <strong>PHP, Laravel &amp; MySQL</strong> on the backend.</p>
+
+          <p>I'm <strong>at the beginning of my journey</strong> and fully committed to it. Every project I build teaches me something new. So far I've shipped 4 live projects — Picnic Games, FureverCare, Travel Smart and Head Tail — and I'm going deeper into <strong>Laravel and MySQL</strong> every day.</p>
+
+          <p>I'm looking for my <strong>first professional role or freelance project</strong> where I can grow alongside a team, contribute real work, and keep leveling up as a full stack developer.</p>
+
+          <div class="timeline-title"><i class="bi bi-journal-code"></i> My Journey</div>
+          <div class="timeline">
+            <div class="tl-item reveal">
+              <div class="tl-dot"><i class="bi bi-star-fill"></i></div>
+              <div class="tl-body">
+                <div class="tl-year">2025 — Started</div>
+                <div class="tl-head">Enrolled at Aptech, Karachi</div>
+                <div class="tl-sub">Began formal full stack development training at Aptech — HTML, CSS, JavaScript and more.</div>
+              </div>
+            </div>
+            <div class="tl-item reveal rd1">
+              <div class="tl-dot"><i class="bi bi-code-slash"></i></div>
+              <div class="tl-body">
+                <div class="tl-year">2025 — First Projects</div>
+                <div class="tl-head">HTML, CSS &amp; Bootstrap Live</div>
+                <div class="tl-sub">Built and deployed FureverCare — a full Bootstrap 5 project live on Vercel.</div>
+              </div>
+            </div>
+            <div class="tl-item reveal rd2">
+              <div class="tl-dot"><i class="bi bi-lightning-charge"></i></div>
+              <div class="tl-body">
+                <div class="tl-year">2025 — Building More</div>
+                <div class="tl-head">JavaScript Projects Shipped</div>
+                <div class="tl-sub">Launched Picnic Games, Travel Smart and Head Tail — interactive JS apps with animations and gameplay.</div>
+              </div>
+            </div>
+            <div class="tl-item reveal rd3">
+              <div class="tl-dot"><i class="bi bi-rocket-takeoff"></i></div>
+              <div class="tl-body">
+                <div class="tl-year">2025 — Going Full Stack</div>
+                <div class="tl-head">Backend Development at Aptech</div>
+                <div class="tl-sub">Going deeper into PHP, Laravel and MySQL. Building full MVC apps and REST APIs. Actively looking for first professional role.</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:14px;flex-wrap:wrap">
+            <a href="projects.html" class="btn-primary"><i class="bi bi-grid-3x3-gap"></i> See My Projects</a>
+            <a href="contact.html" class="btn-ghost"><i class="bi bi-send"></i> Hire Me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="sec-header reveal">
+        <div>
+          <div class="sec-label">What I Offer</div>
+          <h2 class="sec-title">Services</h2>
+          <p class="sec-sub">Clean, focused frontend work — here's what I can do for you.</p>
+        </div>
+      </div>
+      <div class="svc-full-grid">
+        <div class="svc-full-card card reveal">
+          <div class="icon-box"><i class="bi bi-brush"></i></div>
+          <div class="svc-full-name">Website Design</div>
+          <p class="svc-full-desc">Modern, clean layouts built from scratch. Every pixel designed with purpose.</p>
+          <ul class="svc-full-list">
+            <li><i class="bi bi-check2"></i> Responsive & mobile-first</li>
+            <li><i class="bi bi-check2"></i> Custom CSS animations</li>
+            <li><i class="bi bi-check2"></i> Cross-browser compatible</li>
+            <li><i class="bi bi-check2"></i> Performance optimized</li>
+          </ul>
+        </div>
+        <div class="svc-full-card card reveal rd1">
+          <div class="icon-box"
+            style="background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.08);color:var(--text)"><i
+              class="bi bi-code-slash"></i></div>
+          <div class="svc-full-name">Frontend Development</div>
+          <p class="svc-full-desc">Full website builds from design to live deployment using the core web stack.</p>
+          <ul class="svc-full-list">
+            <li><i class="bi bi-check2"></i> HTML5 & CSS3</li>
+            <li><i class="bi bi-check2"></i> JavaScript interactions</li>
+            <li><i class="bi bi-check2"></i> Bootstrap 5 components</li>
+            <li><i class="bi bi-check2"></i> Vercel / GitHub Pages deploy</li>
+          </ul>
+        </div>
+        <div class="svc-full-card card reveal rd2">
+          <div class="icon-box" style="background:rgba(123,97,255,.1);border-color:rgba(123,97,255,.2);color:#a78bfa"><i
+              class="bi bi-tools"></i></div>
+          <div class="svc-full-name">Website Fixes</div>
+          <p class="svc-full-desc">Debugging, layout improvements, and code cleanup on your existing website.</p>
+          <ul class="svc-full-list">
+            <li><i class="bi bi-check2"></i> Bug identification & fixes</li>
+            <li><i class="bi bi-check2"></i> Layout & spacing fixes</li>
+            <li><i class="bi bi-check2"></i> Mobile responsiveness</li>
+            <li><i class="bi bi-check2"></i> Code refactoring</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">Okasha Bukhari</div>
+        <nav class="footer-nav">
+          <a href="index.html">Home</a><a href="about.html">About</a><a href="skills.html">Skills</a><a
+            href="projects.html">Projects</a><a href="contact.html">Contact</a>
+        </nav>
+        <div class="footer-social">
+          <a href="https://github.com/okashabukhari1" target="_blank" rel="noopener noreferrer" class="fsoc" aria-label="Okasha Bukhari on GitHub"><i class="bi bi-github"></i></a>
+          <a href="mailto:okashabukhari295@gmail.com" class="fsoc" aria-label="Email Okasha Bukhari"><i class="bi bi-envelope"></i></a>
+          <a href="tel:+923272707981" class="fsoc" aria-label="Call Okasha Bukhari"><i class="bi bi-telephone"></i></a>
+          <a href="https://wa.me/923272707981" target="_blank" rel="noopener noreferrer" class="fsoc" aria-label="WhatsApp Okasha Bukhari"><i class="bi bi-whatsapp"></i></a>
+          <a href="https://www.instagram.com/okasha_bukhari1/" target="_blank" rel="noopener noreferrer" class="fsoc" aria-label="Okasha Bukhari on Instagram"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-copy"><span>© 2025 Okasha Bukhari</span><span>Built with HTML · CSS · JavaScript</span></div>
+    </div>
+  </footer>
+
+  <script src="shared.js"></script>
+</body>
+
+</html>

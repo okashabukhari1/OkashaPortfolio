@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ══ Primary SEO ══════════════════════════════════════════════ -->
+  <title>Okasha Bukhari — Full Stack Developer | HTML CSS JavaScript Node.js</title>
+  <!-- ══ PRIMARY SEO ═══════════════════════════════════════════════ -->
+  <meta name="description"
+    content="Okasha Bukhari is a full stack developer from Karachi, Pakistan, studying at Aptech. Skilled in PHP, Laravel, MySQL, HTML, CSS, JavaScript and Bootstrap. Open for freelance and junior roles.">
+  <meta name="keywords"
+    content="Okasha Bukhari, full stack developer, PHP Laravel MySQL developer, HTML CSS JavaScript Bootstrap, web developer Karachi Pakistan, Aptech developer, hire full stack developer">
+  <meta name="author" content="Okasha Bukhari">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://okashabukhari1.github.io/index.html">
+
+  <!-- ══ OPEN GRAPH ════════════════════════════════════════════════ -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Okasha Bukhari — Full Stack Developer">
+  <meta property="og:title" content="Okasha Bukhari — Full Stack Developer from Karachi, Pakistan">
+  <meta property="og:description"
+    content="Full stack developer from Karachi studying at Aptech. PHP, Laravel, MySQL, HTML, CSS, JavaScript and Bootstrap. Open for freelance and junior roles.">
+  <meta property="og:image" content="https://okashabukhari1.github.io/Okasha.jpeg">
+  <meta property="og:image:alt" content="Okasha Bukhari — Full Stack Developer from Karachi, Pakistan">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+  <meta property="og:url" content="https://okashabukhari1.github.io/index.html">
+  <meta property="og:locale" content="en_US">
+
+  <!-- ══ TWITTER CARD ══════════════════════════════════════════════ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Okasha Bukhari — Full Stack Developer from Karachi, Pakistan">
+  <meta name="twitter:description"
+    content="Full stack developer from Karachi studying at Aptech. PHP, Laravel, MySQL, HTML, CSS, JavaScript and Bootstrap. Open for freelance and junior roles.">
+  <meta name="twitter:image" content="https://okashabukhari1.github.io/Okasha.jpeg">
+  <meta name="twitter:image:alt" content="Okasha Bukhari — Full Stack Developer">
+
+  <!-- ══ JSON-LD STRUCTURED DATA ══════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://okashabukhari1.github.io/#person",
+        "name": "Okasha Bukhari",
+        "jobTitle": "Full Stack Developer",
+        "description": "Full stack developer from Karachi, Pakistan. Studying at Aptech. Building with PHP, Laravel, MySQL, HTML, CSS, JavaScript and Bootstrap.",
+        "url": "https://okashabukhari1.github.io",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://okashabukhari1.github.io/Okasha.jpeg",
+          "width": 800,
+          "height": 800
+        },
+        "email": "okashabukhari295@gmail.com",
+        "telephone": "+92-327-270-7981",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Karachi",
+          "addressRegion": "Sindh",
+          "addressCountry": "PK"
+        },
+        "sameAs": [
+          "https://github.com/okashabukhari1",
+          "https://www.instagram.com/okasha_bukhari1/"
+        ],
+        "knowsAbout": ["HTML5","CSS3","JavaScript","Bootstrap 5","PHP","Laravel","MySQL","Responsive Web Design","Git","GitHub","REST APIs"],
+        "hasOccupation": {
+          "@type": "Occupation",
+          "name": "Full Stack Developer",
+          "occupationLocation": { "@type": "Country", "name": "Pakistan" }
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://okashabukhari1.github.io/index.html",
+        "name": "Okasha Bukhari — Portfolio Home",
+        "url": "https://okashabukhari1.github.io/index.html",
+        "isPartOf": { "@id": "https://okashabukhari1.github.io/#website" },
+        "about": { "@id": "https://okashabukhari1.github.io/#person" }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://okashabukhari1.github.io/#website",
+        "name": "Okasha Bukhari Portfolio",
+        "url": "https://okashabukhari1.github.io",
+        "description": "Portfolio of Okasha Bukhari — full stack developer from Karachi using PHP, Laravel, MySQL, HTML, CSS, JavaScript and Bootstrap.",
+        "author": { "@id": "https://okashabukhari1.github.io/#person" }
+      }
+    ]
+  }
+  </script>
+
+  <!-- ══ PERFORMANCE HINTS ══════════════════════════════════════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="shared.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    /* ══ INTRO SCREEN ════════════════════════════════════════════════ */
+    #intro-screen {
+      position: fixed;
+      inset: 0;
+      z-index: 300;
+      background: #020810;
+      overflow: hidden;
+    }
+
+    /* perspective grid floor */
+    #intro-screen::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 46%;
+      background:
+        linear-gradient(rgba(0, 212, 255, .04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 212, 255, .04) 1px, transparent 1px);
+      background-size: 55px 55px;
+      transform: perspective(500px) rotateX(65deg);
+      transform-origin: bottom;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* floor glow line */
+    #intro-screen::before {
+      content: '';
+      position: absolute;
+      bottom: 27%;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0, 212, 255, .6), transparent);
+      z-index: 2;
+    }
+
+    .scanlines {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 10;
+      background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 0, 0, .08) 2px, rgba(0, 0, 0, .08) 4px);
+    }
+
+    /* Three.js canvas — bottom 60% only, so text stays unobstructed */
+    #three-canvas {
+      position: absolute;
+      top: 40%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100% !important;
+      height: 60% !important;
+      z-index: 3;
+    }
+
+    /* Glow rings */
+    .glow-ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(0, 212, 255, .09);
+      animation: ring-expand 3.2s ease-out infinite;
+      pointer-events: none;
+      z-index: 2;
+      transform: translate(-50%, 50%);
+    }
+
+    .glow-ring:nth-child(2) {
+      width: 180px;
+      height: 180px;
+      animation-delay: 0s;
+    }
+
+    .glow-ring:nth-child(3) {
+      width: 320px;
+      height: 320px;
+      animation-delay: .9s;
+    }
+
+    .glow-ring:nth-child(4) {
+      width: 480px;
+      height: 480px;
+      animation-delay: 1.8s;
+    }
+
+    @keyframes ring-expand {
+      0% {
+        opacity: .8;
+        transform: translate(-50%, 50%) scale(.7);
+      }
+
+      100% {
+        opacity: 0;
+        transform: translate(-50%, 50%) scale(1.5);
+      }
+    }
+
+    /* Welcome text */
+    .welcome-text {
+      position: absolute;
+      top: 12%;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      width: 92%;
+      opacity: 0;
+      z-index: 20;
+      pointer-events: none;
+    }
+
+    .welcome-text.visible {
+      animation: wt-appear .9s ease forwards;
+      pointer-events: all;
+    }
+
+    @keyframes wt-appear {
+      from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(18px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
+    }
+
+    .wt-label {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .wt-label i {
+      font-size: .9rem;
+    }
+
+    .welcome-text .welcome-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.7rem, 4.5vw, 3.2rem);
+      font-weight: 700;
+      letter-spacing: -.025em;
+      color: #fff;
+      margin-bottom: 8px;
+      text-shadow: 0 0 50px rgba(0, 212, 255, .6), 0 0 100px rgba(0, 212, 255, .2);
+    }
+
+    .welcome-text .welcome-title span {
+      color: var(--cyan);
+    }
+
+    .enter-btn {
+      margin-top: 28px;
+      margin-right: 100px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--cyan), var(--cyan2));
+      color: #050d1a;
+      font-weight: 700;
+      font-size: .84rem;
+      padding: 13px 24px;
+      border-radius: 100px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 0 28px rgba(0, 212, 255, .4);
+      transition: all .25s;
+      opacity: 0;
+      animation: wt-appear .8s ease 0.8s forwards;
+    }
+
+    .welcome-text.visible .enter-btn {
+      opacity: 0;
+      animation: wt-appear .8s ease 0.6s forwards;
+    }
+
+    .enter-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 44px rgba(0, 212, 255, .6);
+    }
+
+    .skip-btn {
+      position: absolute;
+      bottom: 24px;
+      right: 32px;
+      font-size: .68rem;
+      color: var(--muted);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      border: 1px solid var(--border);
+      padding: 7px 16px;
+      border-radius: 100px;
+      background: transparent;
+      cursor: pointer;
+      transition: all .2s;
+      z-index: 20;
+    }
+
+    .skip-btn:hover {
+      color: var(--text);
+      border-color: var(--cyan);
+    }
+
+    /* ══ PORTFOLIO WRAPPER ═══════════════════════════════════════════ */
+    #portfolio {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* ══ HERO ════════════════════════════════════════════════════════ */
+    #hero {
+      min-height: 100vh;
+      padding-top: 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 60px;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding-left: 60px;
+      padding-right: 60px;
+      position: relative;
+    }
+
+    .hero-glow {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      background: radial-gradient(circle, rgba(0, 212, 255, .07) 0%, transparent 70%);
+    }
+
+    .hg1 {
+      width: 500px;
+      height: 500px;
+      right: -80px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .hg2 {
+      width: 320px;
+      height: 320px;
+      left: -60px;
+      bottom: 8%;
+    }
+
+    .hero-left {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-greeting {
+      font-size: .76rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hero-greeting::before {
+      content: '';
+      width: 28px;
+      height: 1.5px;
+      background: var(--cyan);
+    }
+
+    .hero-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.4rem, 4.5vw, 4.4rem);
+      font-weight: 700;
+      letter-spacing: -.035em;
+      line-height: 1.04;
+      margin-bottom: 14px;
+    }
+
+    .hero-title .cyan {
+      color: var(--cyan);
+    }
+
+    .hero-role {
+      font-size: clamp(1rem, 1.8vw, 1.4rem);
+      color: var(--muted);
+      font-weight: 300;
+      margin-bottom: 28px;
+    }
+
+    .type-text {
+      color: var(--cyan);
+      font-weight: 600;
+    }
+
+    .hero-bio {
+      font-size: .88rem;
+      color: var(--muted);
+      line-height: 1.9;
+      max-width: 440px;
+      margin-bottom: 40px;
+    }
+
+    .hero-bio a {
+      color: var(--text);
+      border-bottom: 1px solid rgba(0, 212, 255, .25);
+      padding-bottom: 1px;
+      transition: all .2s;
+    }
+
+    .hero-bio a:hover {
+      color: var(--cyan);
+      border-color: var(--cyan);
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    /* Hero right card */
+    .hero-right {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .person-card {
+      position: relative;
+      width: 320px;
+      height: 400px;
+      border-radius: 24px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      background: #000;
+    }
+
+    .person-card img.person-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .person-card-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 22px;
+      background: rgba(5, 13, 26, .82);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .person-card-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .person-card-role {
+      font-size: .72rem;
+      color: var(--cyan);
+      font-weight: 500;
+    }
+
+    /* ══ STATS ═══════════════════════════════════════════════════════ */
+    #stats {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: rgba(13, 31, 60, .35);
+    }
+
+    .stats-row {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 60px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .stat-cell {
+      padding: 44px 24px;
+      text-align: center;
+      border-right: 1px solid var(--border);
+      transition: background .25s;
+    }
+
+    .stat-cell:last-child {
+      border-right: none;
+    }
+
+    .stat-cell:hover {
+      background: rgba(0, 212, 255, .035);
+    }
+
+    .stat-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--cyan);
+      letter-spacing: -.03em;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .stat-lbl {
+      font-size: .72rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .09em;
+    }
+
+    /* ══ SERVICES PREVIEW ════════════════════════════════════════════ */
+    #services-preview {
+      border-top: 1px solid var(--border);
+    }
+
+    .svc-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .svc-card {
+      padding: 32px;
+    }
+
+    .svc-card .icon-box {
+      margin-bottom: 20px;
+    }
+
+    .svc-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: .98rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .svc-desc {
+      font-size: .78rem;
+      color: var(--muted);
+      line-height: 1.82;
+      margin-bottom: 18px;
+    }
+
+    .svc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .svc-list li {
+      font-size: .74rem;
+      color: var(--muted);
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      transition: color .2s;
+    }
+
+    .svc-list li i {
+      color: var(--cyan);
+      font-size: .75rem;
+    }
+
+    .svc-card:hover .svc-list li {
+      color: var(--text);
+    }
+
+    /* ══ PROJECTS PREVIEW ════════════════════════════════════════════ */
+    #projects-preview {
+      border-top: 1px solid var(--border);
+      background: rgba(10, 22, 40, .4);
+    }
+
+    .proj-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .proj-card {
+      cursor: default;
+    }
+
+    .proj-visual {
+      height: 176px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pv1 {
+      background: linear-gradient(135deg, #0f2460, #1e3a8a, #1d4ed8);
+    }
+
+    .pv2 {
+      background: linear-gradient(135deg, #1c1c1e, #2d1b69, #4c1d95);
+    }
+
+    .pv3 {
+      background: linear-gradient(135deg, #064e3b, #065f46, #047857);
+    }
+
+    .pv-icon {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: drop-shadow(0 8px 20px rgba(0, 0, 0, .4));
+      animation: float-p 4s ease-in-out infinite;
+    }
+
+    .pv-glow {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 50%, rgba(0, 212, 255, .1), transparent 70%);
+    }
+
+    .pv-name {
+      position: absolute;
+      bottom: 14px;
+      left: 16px;
+      right: 16px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: rgba(255, 255, 255, .06);
+      letter-spacing: -.04em;
+      pointer-events: none;
+    }
+
+    .proj-body {
+      padding: 22px;
+    }
+
+    .proj-cat {
+      font-size: .6rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 7px;
+    }
+
+    .proj-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: .96rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: -.01em;
+    }
+
+    .proj-desc {
+      font-size: .75rem;
+      color: var(--muted);
+      line-height: 1.72;
+      margin-bottom: 16px;
+    }
+
+    .proj-foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .proj-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .ptag {
+      font-size: .58rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 100px;
+      background: rgba(0, 212, 255, .07);
+      border: 1px solid rgba(0, 212, 255, .14);
+      color: var(--cyan);
+    }
+
+    .proj-link-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(0, 212, 255, .09);
+      border: 1.5px solid rgba(0, 212, 255, .22);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--cyan);
+      font-size: .88rem;
+      flex-shrink: 0;
+      transition: all .25s;
+    }
+
+    .proj-card:hover .proj-link-btn {
+      background: var(--cyan);
+      color: #050d1a;
+      transform: rotate(45deg);
+    }
+
+    /* ══ CTA STRIP ═══════════════════════════════════════════════════ */
+    #cta-strip {
+      border-top: 1px solid var(--border);
+      padding: 80px 0;
+      text-align: center;
+      background: rgba(10, 22, 40, .3);
+    }
+
+    #cta-strip h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      letter-spacing: -.025em;
+      margin-bottom: 14px;
+    }
+
+    #cta-strip h2 span {
+      color: var(--cyan);
+    }
+
+    #cta-strip p {
+      font-size: .88rem;
+      color: var(--muted);
+      margin-bottom: 32px;
+    }
+
+    #cta-strip .cta-btns {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ══ RESPONSIVE ══════════════════════════════════════════════════ */
+    @media(max-width:900px) {
+      #hero {
+        grid-template-columns: 1fr;
+        padding: 100px 20px 60px;
+        min-height: auto;
+        gap: 40px;
+        text-align: center;
+      }
+
+      .hero-right {
+        order: -1;
+      }
+
+      .hero-greeting {
+        justify-content: center;
+      }
+
+      .hero-greeting::before {
+        display: none;
+      }
+
+      .hero-btns {
+        justify-content: center;
+      }
+
+      .hero-bio {
+        margin: 0 auto 40px;
+        max-width: 100%;
+      }
+
+      .hg1,
+      .hg2 {
+        display: none;
+      }
+
+      .stats-row {
+        grid-template-columns: 1fr;
+        padding: 0;
+      }
+
+      .stat-cell {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding: 28px 20px;
+      }
+
+      .stat-cell:last-child {
+        border-bottom: none;
+      }
+
+      .svc-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .proj-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media(max-width:480px) {
+      .person-card {
+        width: 230px;
+        height: 290px;
+      }
+
+      .person-card img.person-photo {
+        object-fit: cover;
+      }
+
+      .person-icon-big {
+        font-size: 4.5rem;
+      }
+
+      .person-ring {
+        width: 155px;
+        height: 155px;
+      }
+
+      .tech-badge {
+        display: none;
+      }
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-bg"></div>
+  <div id="cur"></div>
+  <div id="cur-ring"></div>
+  <div id="cur-arms"></div>
+
+  <!-- ══ INTRO SCREEN ══════════════════════════════════════════════ -->
+  <div id="intro-screen">
+    <div class="scanlines"></div>
+
+    <!-- Three.js renders here — fills the full screen -->
+    <canvas id="three-canvas"></canvas>
+
+    <!-- Glow rings centered at character stand point -->
+    <div class="glow-ring" style="position:absolute;bottom:28%;left:50%;"></div>
+    <div class="glow-ring" style="position:absolute;bottom:28%;left:50%;"></div>
+    <div class="glow-ring" style="position:absolute;bottom:28%;left:50%;"></div>
+
+    <!-- Welcome text — fades in after character arrives -->
+    <div class="welcome-text" id="welcomeText">
+      <div class="wt-label"><i class="bi bi-code-slash"></i> FRONTEND DEVELOPER <i class="bi bi-braces"></i></div>
+      <p class="welcome-title">Welcome to<br><span>Okasha's Portfolio</span></p>
+      <button class="enter-btn" id="enterBtn">
+        <i class="bi bi-box-arrow-in-right"></i> Enter Portfolio
+      </button>
+    </div>
+    <button class="skip-btn" id="skipBtn">Skip intro <i class="bi bi-skip-end-fill"></i></button>
+  </div>
+
+  <!-- ══ NAV ══════════════════════════════════════════════════════ -->
+  <nav>
+    <div class="nav-logo">Okasha Bukhari</div>
+    <div class="nav-links">
+      <a href="index.html" class="active"><i class="bi bi-house"></i> Home</a>
+      <a href="about.html"><i class="bi bi-person"></i> About</a>
+      <a href="skills.html"><i class="bi bi-lightning"></i> Skills</a>
+      <a href="projects.html"><i class="bi bi-grid-3x3-gap"></i> Projects</a>
+      <a href="contact.html"><i class="bi bi-envelope"></i> Contact</a>
+    </div>
+    <a href="mailto:okashabukhari295@gmail.com" class="nav-cta"><i class="bi bi-download"></i> Download CV</a>
+    <button class="hamburger" id="hamburger" aria-label="Open navigation menu"
+      aria-expanded="false"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mob-menu" id="mobMenu">
+    <a href="index.html" class="active"><i class="bi bi-house"></i> Home</a>
+    <a href="about.html"><i class="bi bi-person"></i> About</a>
+    <a href="skills.html"><i class="bi bi-lightning"></i> Skills</a>
+    <a href="projects.html"><i class="bi bi-grid-3x3-gap"></i> Projects</a>
+    <a href="contact.html"><i class="bi bi-envelope"></i> Contact</a>
+  </div>
+
+  <!-- ══ MAIN ══════════════════════════════════════════════════════ -->
+  <div id="portfolio">
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-glow hg1"></div>
+      <div class="hero-glow hg2"></div>
+      <div class="hero-left">
+        <div class="hero-greeting">Hello, I'm</div>
+        <h1 class="hero-title">Okasha<br><span class="cyan">Bukhari</span><span class="sr-only"> — Full Stack Developer
+            from Karachi, Pakistan</span></h1>
+        <p class="hero-role">Full Stack Developer — <span class="type-text" id="typeTarget">Karachi,
+            Pakistan</span><span
+            style="color:var(--cyan);animation:blink .6s step-end infinite;display:inline-block;width:2px;height:1em;background:var(--cyan);vertical-align:middle;margin-left:2px"></span>
+        </p>
+        <p class="hero-bio">
+          A <a href="about.html">full stack developer</a> from Karachi, Pakistan — studying at <strong>Aptech</strong>
+          &amp; building
+          with <a href="skills.html">PHP, Laravel, MySQL, HTML, CSS &amp; JavaScript</a>.
+        </p>
+        <div class="hero-btns">
+          <a href="projects.html" class="btn-primary"><i class="bi bi-grid-3x3-gap"></i> View Projects</a>
+          <a href="contact.html" class="btn-ghost"><i class="bi bi-send"></i> Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="person-card">
+          <!-- replace the src with your portrait image file -->
+          <img src="Okasha.jpeg" alt="Okasha Bukhari — Full Stack Developer from Karachi, Pakistan" class="person-photo"
+            loading="eager" width="300" height="360">
+          <div class="person-card-info">
+            <div class="person-card-name">Okasha Bukhari</div>
+            <div class="person-card-role">Full Stack Developer</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <div id="stats">
+      <div class="stats-row">
+        <div class="stat-cell reveal">
+          <span class="stat-num" data-count="4" data-suffix="+">4+</span>
+          <span class="stat-lbl">Projects Shipped</span>
+        </div>
+        <div class="stat-cell reveal rd1">
+          <span class="stat-num" data-count="5" data-suffix="+">5+</span>
+          <span class="stat-lbl">Core Technologies</span>
+        </div>
+        <div class="stat-cell reveal rd2">
+          <span class="stat-num" data-count="100" data-suffix="%">0%</span>
+          <span class="stat-lbl">Dedicated to Growth</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICES PREVIEW -->
+    <section id="services-preview" class="section">
+      <div class="container">
+        <div class="sec-header reveal">
+          <div>
+            <div class="sec-label">What I Do</div>
+            <h2 class="sec-title">My Services</h2>
+            <p class="sec-sub">Clean, responsive websites built from scratch with care and attention to detail.</p>
+          </div>
+          <a href="about.html#services" class="view-all">View All <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="svc-grid">
+          <div class="svc-card card reveal">
+            <div class="icon-box"><i class="bi bi-brush"></i></div>
+            <div class="svc-name">Website Design</div>
+            <p class="svc-desc">Modern, clean layouts that look great on every screen size from desktop to mobile.</p>
+            <ul class="svc-list">
+              <li><i class="bi bi-chevron-right"></i> Responsive layouts</li>
+              <li><i class="bi bi-chevron-right"></i> Mobile-first approach</li>
+              <li><i class="bi bi-chevron-right"></i> Custom CSS styling</li>
+            </ul>
+          </div>
+          <div class="svc-card card reveal rd1">
+            <div class="icon-box"
+              style="background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.08);color:var(--text)"><i
+                class="bi bi-code-slash"></i></div>
+            <div class="svc-name">Frontend Development</div>
+            <p class="svc-desc">Building full websites from design to deployment using HTML, CSS, JavaScript and
+              Bootstrap.</p>
+            <ul class="svc-list">
+              <li><i class="bi bi-chevron-right"></i> HTML & CSS builds</li>
+              <li><i class="bi bi-chevron-right"></i> JavaScript interactions</li>
+              <li><i class="bi bi-chevron-right"></i> Animations & effects</li>
+            </ul>
+          </div>
+          <div class="svc-card card reveal rd2">
+            <div class="icon-box" style="background:rgba(123,97,255,.1);border-color:rgba(123,97,255,.2);color:#a78bfa">
+              <i class="bi bi-tools"></i>
+            </div>
+            <div class="svc-name">Website Fixes</div>
+            <p class="svc-desc">Bug fixes, layout improvements and cross-browser compatibility on existing websites.</p>
+            <ul class="svc-list">
+              <li><i class="bi bi-chevron-right"></i> Bug fixes</li>
+              <li><i class="bi bi-chevron-right"></i> Layout improvements</li>
+              <li><i class="bi bi-chevron-right"></i> Performance tweaks</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS PREVIEW -->
+    <section id="projects-preview" class="section">
+      <div class="container">
+        <div class="sec-header reveal">
+          <div>
+            <div class="sec-label">My Work</div>
+            <h2 class="sec-title">Top Projects</h2>
+          </div>
+          <a href="projects.html" class="view-all">All Projects <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="proj-grid">
+          <div class="proj-card card reveal">
+            <div class="proj-visual pv1">
+              <div class="pv-glow"></div>
+              <img src="p_images/PicnicGames_image.png"
+                alt="Picnic Games — outdoor and indoor games website by Okasha Bukhari" loading="lazy" width="220"
+                height="160" class="pv-icon">
+              <div class="pv-name">PICNIC GAMES</div>
+            </div>
+            <div class="proj-body">
+              <div class="proj-cat">HTML · CSS · JavaScript</div>
+              <div class="proj-title">Picnic Games</div>
+              <p class="proj-desc">A fun outdoor & indoor games site with custom animations and interactive browsing.
+              </p>
+              <div class="proj-foot">
+                <div class="proj-tags"><span class="ptag">HTML</span><span class="ptag">CSS</span><span
+                    class="ptag">JS</span></div>
+                <a href="https://okashabukhari1.github.io/Picnic-Games/" target="_blank" rel="noopener noreferrer"
+                  class="proj-link-btn" aria-label="View Picnic Games live site"><i
+                    class="bi bi-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="proj-card card reveal rd1">
+            <div class="proj-visual pv2">
+              <div class="pv-glow"></div>
+              <img src="p_images/FurEver_image.png" alt="FureverCare pet adoption website screenshot" class="pv-icon"
+                loading="lazy" width="160" height="160">
+              <div class="pv-name">FUREVER CARE</div>
+            </div>
+            <div class="proj-body">
+              <div class="proj-cat">HTML · CSS · Bootstrap</div>
+              <div class="proj-title">FureverCare</div>
+              <p class="proj-desc">Pet care & adoption platform with listings, profiles, and a responsive Bootstrap
+                layout.</p>
+              <div class="proj-foot">
+                <div class="proj-tags"><span class="ptag">HTML</span><span class="ptag">Bootstrap</span></div>
+                <a href="https://furevercare-rosy.vercel.app/" target="_blank" rel="noopener noreferrer"
+                  class="proj-link-btn" aria-label="View FureverCare live site"><i class="bi bi-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="proj-card card reveal rd2">
+            <div class="proj-visual pv3">
+              <div class="pv-glow"></div>
+              <img src="p_images/TravelSmart_image.png" alt="Travel Smart travel guide website screenshot"
+                class="pv-icon" loading="lazy" width="160" height="160">
+              <div class="pv-name">TRAVEL SMART</div>
+            </div>
+            <div class="proj-body">
+              <div class="proj-cat">HTML · CSS · JavaScript</div>
+              <div class="proj-title">Travel Smart</div>
+              <p class="proj-desc">Interactive travel site with tour packages, destination guides, and itineraries.</p>
+              <div class="proj-foot">
+                <div class="proj-tags"><span class="ptag">HTML</span><span class="ptag">CSS</span><span
+                    class="ptag">JS</span></div>
+                <a href="https://travel-smart-eta.vercel.app/" target="_blank" rel="noopener noreferrer"
+                  class="proj-link-btn" aria-label="View Travel Smart live site"><i
+                    class="bi bi-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta-strip">
+      <div class="container">
+        <h2>Ready to <span>build something</span>?</h2>
+        <p>Open for freelance, junior roles & collaborations. Let's talk.</p>
+        <div class="cta-btns">
+          <a href="contact.html" class="btn-primary"><i class="bi bi-send"></i> Get in Touch</a>
+          <a href="https://github.com/okashabukhari1" target="_blank" rel="noopener noreferrer" class="btn-ghost"><i
+              class="bi bi-github"></i>
+            GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-logo">Okasha Bukhari</div>
+          <nav class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+          <div class="footer-social">
+            <a href="https://github.com/okashabukhari1" target="_blank" rel="noopener noreferrer" class="fsoc"
+              aria-label="Okasha Bukhari on GitHub"><i class="bi bi-github"></i></a>
+            <a href="mailto:okashabukhari295@gmail.com" class="fsoc" aria-label="Email Okasha Bukhari"><i
+                class="bi bi-envelope"></i></a>
+            <a href="tel:+923272707981" class="fsoc" aria-label="Call Okasha Bukhari"><i
+                class="bi bi-telephone"></i></a>
+            <a href="https://wa.me/923272707981" target="_blank" rel="noopener noreferrer" class="fsoc"
+              aria-label="WhatsApp Okasha Bukhari"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://www.instagram.com/okasha_bukhari1/" target="_blank" rel="noopener noreferrer" class="fsoc"
+              aria-label="Okasha Bukhari on Instagram"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-copy">
+          <span>© 2025 Okasha Bukhari — All rights reserved.</span>
+          <span>Built with HTML · CSS · JavaScript · Bootstrap</span>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- /portfolio -->
+
+  <script src="shared.js"></script>
+  <style>
+    @keyframes blink {
+      50% {
+        opacity: 0
+      }
+    }
+  </style>
+
+  <!-- Three.js from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <script>
+    /* ══════════════════════════════════════════════════════════════
+       SESSION STORAGE — show intro only once per session.
+       Reset when user navigates back to index.html directly
+       (not from another portfolio page).
+       Logic:
+         - If sessionStorage has 'introSeen' AND referrer is
+           one of our own pages → skip intro entirely.
+         - Otherwise → show intro, then set 'introSeen'.
+    ══════════════════════════════════════════════════════════════ */
+    (function () {
+      const ref = document.referrer;
+      const ownPages = ['about.html', 'skills.html', 'projects.html', 'contact.html'];
+      const fromOwn = ownPages.some(p => ref.includes(p));
+      const seen = sessionStorage.getItem('introSeen');
+
+      if (seen && fromOwn) {
+        // Skip — remove intro immediately, show portfolio
+        const sc = document.getElementById('intro-screen');
+        if (sc) sc.remove();
+        const pt = document.getElementById('portfolio');
+        if (pt) { pt.style.opacity = '1'; pt.style.pointerEvents = 'all'; }
+        startTypewriter();
+        return;
+      }
+
+      // Mark seen for this session
+      sessionStorage.setItem('introSeen', '1');
+
+      /* ══════════════════════════════════════════════════════════
+         THREE.JS 3D CHARACTER
+      ══════════════════════════════════════════════════════════ */
+      const canvas = document.getElementById('three-canvas');
+      const W = window.innerWidth, H = Math.round(window.innerHeight * 0.6);
+
+      // Renderer
+      const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+      renderer.setSize(W, H);
+      renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+      renderer.shadowMap.enabled = true;
+      renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+      // Scene & Camera
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(45, W / H, 0.1, 100);
+      camera.position.set(0, 1.5, 7);
+      camera.lookAt(0, 0.5, 0);
+
+      // Resize
+      window.addEventListener('resize', () => {
+        const nw = window.innerWidth, nh = Math.round(window.innerHeight * 0.6);
+        renderer.setSize(nw, nh);
+        camera.aspect = nw / nh; camera.updateProjectionMatrix();
+      });
+
+      /* ── Materials ──────────────────────────────────────────── */
+      const CYAN = 0x00d4ff;
+      const DARK = 0x0d2a5a;
+      const DARKER = 0x071630;
+      const WHITE = 0xffffff;
+
+      const matBody = new THREE.MeshPhongMaterial({ color: DARK, shininess: 80, specular: new THREE.Color(0x00aacc) });
+      const matHead = new THREE.MeshPhongMaterial({ color: CYAN, shininess: 120, specular: new THREE.Color(WHITE), emissive: new THREE.Color(0x003344) });
+      const matLimb = new THREE.MeshPhongMaterial({ color: DARK, shininess: 60 });
+      const matShoe = new THREE.MeshPhongMaterial({ color: CYAN, shininess: 100, emissive: new THREE.Color(0x001a22) });
+      const matFace = new THREE.MeshPhongMaterial({ color: DARKER });
+      const matGlow = new THREE.MeshBasicMaterial({ color: CYAN, transparent: true, opacity: .15 });
+      const matStripe = new THREE.MeshBasicMaterial({ color: CYAN, transparent: true, opacity: .4 });
+      const matJoint = new THREE.MeshPhongMaterial({ color: 0x0a1f3c, shininess: 120 });
+
+      function box(w, h, d, mat, rx, ry, rz) {
+        const m = new THREE.Mesh(new THREE.BoxGeometry(w, h, d, 2, 2, 2), mat);
+        if (rx) m.rotation.x = rx;
+        if (ry) m.rotation.y = ry;
+        if (rz) m.rotation.z = rz;
+        return m;
+      }
+      function cyl(rt, rb, h, mat, segs = 12) {
+        return new THREE.Mesh(new THREE.CylinderGeometry(rt, rb, h, segs), mat);
+      }
+      function sphere(r, mat, ws = 16, hs = 16) {
+        return new THREE.Mesh(new THREE.SphereGeometry(r, ws, hs), mat);
+      }
+
+      /* ── Character group ────────────────────────────────────── */
+      const char = new THREE.Group();
+      scene.add(char);
+
+      // TORSO
+      const torso = box(.7, 1, .45, matBody);
+      torso.position.y = 1.55;
+      torso.castShadow = true;
+      char.add(torso);
+
+      // Chest stripe detail
+      const stripe = box(.72, .06, .46, matStripe);
+      stripe.position.y = 1.72;
+      char.add(stripe);
+      const stripe2 = box(.12, 1, .46, matStripe);
+      stripe2.position.set(0, 1.55, 0);
+      const stripe2m = stripe2.clone(); stripe2m.material = matStripe.clone(); stripe2m.material.opacity = .15;
+      char.add(stripe2m);
+
+      // NECK
+      const neck = cyl(.12, .12, .22, matBody);
+      neck.position.y = 2.16;
+      char.add(neck);
+
+      // HEAD
+      const head = sphere(.34, matHead, 20, 20);
+      head.position.y = 2.62;
+      head.castShadow = true;
+      char.add(head);
+
+      // Head inner glow sphere
+      const headGlow = sphere(.32, matGlow, 16, 16);
+      headGlow.position.y = 2.62;
+      char.add(headGlow);
+
+      // FACE — eyes
+      const eyeL = sphere(.065, matFace, 10, 10);
+      eyeL.position.set(-.13, 2.66, .3);
+      char.add(eyeL);
+      const eyeR = sphere(.065, matFace, 10, 10);
+      eyeR.position.set(.13, 2.66, .3);
+      char.add(eyeR);
+
+      // Eye shine
+      const shineL = sphere(.03, new THREE.MeshBasicMaterial({ color: 0xffffff }));
+      shineL.position.set(-.11, 2.68, .34);
+      char.add(shineL);
+      const shineR = shineL.clone();
+      shineR.position.set(.15, 2.68, .34);
+      char.add(shineR);
+
+      // Smile arc using torus
+      const smileMat = new THREE.MeshBasicMaterial({ color: DARKER });
+      const smile = new THREE.Mesh(new THREE.TorusGeometry(.1, .018, 8, 16, Math.PI), smileMat);
+      smile.rotation.z = Math.PI;
+      smile.position.set(0, 2.48, .3);
+      char.add(smile);
+
+      // SHOULDERS — rounded cap
+      const shoulderL = sphere(.16, matJoint);
+      shoulderL.position.set(-.46, 2.05, 0);
+      char.add(shoulderL);
+      const shoulderR = sphere(.16, matJoint);
+      shoulderR.position.set(.46, 2.05, 0);
+      char.add(shoulderR);
+
+      // ARMS — each arm is a group so we can rotate at shoulder
+      function makeArm(side) { // side: -1=left, 1=right
+        const g = new THREE.Group();
+        g.position.set(side * .46, 2.05, 0);
+
+        const upper = cyl(.1, .09, .52, matLimb);
+        upper.position.y = -.36;
+        upper.castShadow = true;
+        g.add(upper);
+
+        // Elbow joint
+        const elbow = sphere(.1, matJoint);
+        elbow.position.y = -.68;
+        g.add(elbow);
+
+        const lower = cyl(.09, .08, .46, matLimb);
+        lower.position.y = -.98;
+        g.add(lower);
+
+        // Hand
+        const hand = sphere(.11, matHead, 10, 10);
+        hand.position.y = -1.28;
+        g.add(hand);
+
+        return g;
+      }
+      const armL = makeArm(-1);
+      const armR = makeArm(1);
+      char.add(armL); char.add(armR);
+
+      // HIPS
+      const hips = box(.66, .26, .42, matLimb);
+      hips.position.y = .96;
+      char.add(hips);
+
+      // LEGS — group rotated at hip joint
+      function makeLeg(side) {
+        const g = new THREE.Group();
+        g.position.set(side * .2, .96, 0);
+
+        const upper = cyl(.13, .12, .56, matLimb);
+        upper.position.y = -.38;
+        upper.castShadow = true;
+        g.add(upper);
+
+        // Knee
+        const knee = sphere(.13, matJoint);
+        knee.position.y = -.72;
+        g.add(knee);
+
+        const lower = cyl(.11, .1, .52, matLimb);
+        lower.position.y = -1.06;
+        g.add(lower);
+
+        // Shoe — flattened capsule shape
+        const shoe = box(.28, .14, .46, matShoe);
+        shoe.position.set(side * .04, -1.38, .06);
+        shoe.castShadow = true;
+        g.add(shoe);
+
+        // Shoe sole edge
+        const sole = box(.3, .04, .48, new THREE.MeshBasicMaterial({ color: 0x002233, transparent: true, opacity: .6 }));
+        sole.position.set(side * .04, -1.46, .06);
+        g.add(sole);
+
+        return g;
+      }
+      const legL = makeLeg(-1);
+      const legR = makeLeg(1);
+      char.add(legL); char.add(legR);
+
+      // Shadow disc under feet
+      const shadowDisc = new THREE.Mesh(
+        new THREE.CircleGeometry(.5, 32),
+        new THREE.MeshBasicMaterial({ color: CYAN, transparent: true, opacity: .08, side: THREE.DoubleSide })
+      );
+      shadowDisc.rotation.x = -Math.PI / 2;
+      shadowDisc.position.y = 0.01;
+      char.add(shadowDisc);
+
+      /* ── Lighting ───────────────────────────────────────────── */
+      const ambient = new THREE.AmbientLight(0x112233, 1.8);
+      scene.add(ambient);
+
+      const keyLight = new THREE.DirectionalLight(0x00d4ff, 2.4);
+      keyLight.position.set(3, 6, 4);
+      keyLight.castShadow = true;
+      scene.add(keyLight);
+
+      const fillLight = new THREE.PointLight(0x0055aa, 1.2, 20);
+      fillLight.position.set(-4, 3, 2);
+      scene.add(fillLight);
+
+      const rimLight = new THREE.PointLight(0x00ffcc, 1.5, 15);
+      rimLight.position.set(0, 4, -3);
+      scene.add(rimLight);
+
+      const groundLight = new THREE.PointLight(0x00d4ff, 0.9, 8);
+      groundLight.position.set(0, 0.2, 0);
+      scene.add(groundLight);
+
+      /* ── Ground plane for shadow ────────────────────────────── */
+      const ground = new THREE.Mesh(
+        new THREE.PlaneGeometry(20, 20),
+        new THREE.ShadowMaterial({ opacity: .35 })
+      );
+      ground.rotation.x = -Math.PI / 2;
+      ground.receiveShadow = true;
+      scene.add(ground);
+
+      /* ══════════════════════════════════════════════════════════
+         ANIMATION STATE MACHINE
+         Phase 0: walk in from left (0 → ~2.5s)
+         Phase 1: pause standing (2.5 → 3.5s)
+         Phase 2: turn around to show back (3.5 → 4.2s)
+         Phase 3: idle standing facing back (4.2s+)
+      ══════════════════════════════════════════════════════════ */
+      let clock = { t: 0 };
+      let phase = 0;
+      const startX = -8;
+      const endX = 0;
+      char.position.set(startX, -0.6, 0);
+      char.rotation.y = Math.PI; // start facing right (walking toward center)
+
+      // Welcome text triggers when phase becomes 3
+      let textShown = false;
+
+      function showWelcomeText() {
+        if (textShown) return;
+        textShown = true;
+        const wt = document.getElementById('welcomeText');
+        if (wt) wt.classList.add('visible');
+        // Auto-enter after 5 more seconds
+        setTimeout(enterPortfolio, 5000);
+      }
+
+      const enterBtnEl = document.getElementById('enterBtn');
+      const skipBtnEl = document.getElementById('skipBtn');
+      let enteredAlready = false;
+
+      function enterPortfolio() {
+        if (enteredAlready) return;
+        enteredAlready = true;
+        renderer.setAnimationLoop(null); // stop Three.js loop
+        const sc = document.getElementById('intro-screen');
+        sc.style.transition = 'opacity .7s ease';
+        sc.style.opacity = '0';
+        setTimeout(() => {
+          sc.remove();
+          const pt = document.getElementById('portfolio');
+          pt.style.transition = 'opacity .55s ease';
+          pt.style.opacity = '1';
+          pt.style.pointerEvents = 'all';
+          startTypewriter();
+        }, 700);
+      }
+
+      enterBtnEl.addEventListener('click', enterPortfolio);
+      skipBtnEl.addEventListener('click', enterPortfolio);
+
+      /* ── Walk cycle helpers ─────────────────────────────────── */
+      function walkLegs(t, speed = 8) {
+        const a = Math.sin(t * speed) * .42;
+        legL.rotation.x = a;
+        legR.rotation.x = -a;
+        // Bob slightly
+        char.position.y = -0.6 + Math.abs(Math.sin(t * speed)) * .04;
+      }
+      function walkArms(t, speed = 8) {
+        const a = Math.sin(t * speed) * .35;
+        armL.rotation.x = -a;
+        armR.rotation.x = a;
+      }
+      function idleBreath(t) {
+        const b = Math.sin(t * 1.8) * .015;
+        torso.scale.y = 1 + b;
+        head.position.y = 2.62 + b * 3;
+        headGlow.position.y = head.position.y;
+        eyeL.position.y = 2.66 + b * 3; eyeR.position.y = eyeL.position.y;
+        shineL.position.y = 2.68 + b * 3; shineR.position.y = shineL.position.y;
+        smile.position.y = 2.48 + b * 3;
+        neck.position.y = 2.16 + b * 1.5;
+      }
+      function resetLimbs() {
+        legL.rotation.x = 0; legR.rotation.x = 0;
+        armL.rotation.x = 0; armR.rotation.x = 0;
+        char.position.y = 0;
+      }
+
+      /* ── Easing ─────────────────────────────────────────────── */
+      function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
+      function easeInOut(t) { return t < .5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1; }
+
+      /* ── Render loop ────────────────────────────────────────── */
+      let lastTime = performance.now();
+      renderer.setAnimationLoop(function (now) {
+        const dt = Math.min((now - lastTime) / 1000, 0.05);
+        lastTime = now;
+        clock.t += dt;
+        const t = clock.t;
+
+        if (phase === 0) {
+          // Walk in — duration 2.4s
+          const dur = 2.4;
+          const p = Math.min(t / dur, 1);
+          const ep = easeOut(p);
+          char.position.x = startX + (endX - startX) * ep;
+          walkLegs(t, 9);
+          walkArms(t, 9);
+          if (p >= 1) { phase = 1; clock.t = 0; }
+        }
+        else if (phase === 1) {
+          // Pause standing — 0.9s
+          resetLimbs();
+          idleBreath(t);
+          if (t >= 0.9) { phase = 2; clock.t = 0; }
+        }
+        else if (phase === 2) {
+          // Turn around — 0.75s
+          resetLimbs();
+          idleBreath(t);
+          const p = Math.min(t / 0.75, 1);
+          char.rotation.y = Math.PI + Math.PI * easeInOut(p); // 180→360 (now facing back)
+          if (p >= 1) { phase = 3; clock.t = 0; showWelcomeText(); }
+        }
+        else if (phase === 3) {
+          // Idle — show back, breathe
+          resetLimbs();
+          idleBreath(t);
+          // Subtle side sway
+          char.rotation.z = Math.sin(t * .9) * .018;
+          // Idle arm sway
+          armL.rotation.z = Math.sin(t * .8) * .06 + .08;
+          armR.rotation.z = -Math.sin(t * .8) * .06 - .08;
+        }
+
+        // Gentle spotlight follow
+        groundLight.position.x = char.position.x;
+
+        renderer.render(scene, camera);
+      });
+
+    })(); // end session/intro block
+
+    /* ── Typewriter ──────────────────────────────────────────── */
+    function startTypewriter() {
+      const el = document.getElementById('typeTarget');
+      if (!el) return;
+      const words = ['Full Stack Developer', 'PHP & Laravel Dev', 'MySQL & Databases', 'Aptech Student'];
+      let wi = 0, ci = 0, del = false;
+      function tick() {
+        const w = words[wi];
+        if (!del) { el.textContent = w.slice(0, ++ci); if (ci === w.length) { del = true; setTimeout(tick, 1800); return; } }
+        else { el.textContent = w.slice(0, --ci); if (ci === 0) { del = false; wi = (wi + 1) % words.length; } }
+        setTimeout(tick, del ? 55 : 105);
+      }
+      tick();
+    }
+  </script>
+</body>
+
+</html>
