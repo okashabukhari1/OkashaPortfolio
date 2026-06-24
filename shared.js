@@ -114,6 +114,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
+  /* ── Keyboard support for clickable cards ──────────────────── */
+  document.querySelectorAll('[role="button"][data-id]').forEach(card => {
+    card.addEventListener('keydown', e => {
+      if(e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        card.click();
+      }
+    });
+  });
+
   /* ── Contact form ──────────────────────────────────────────── */
   window.submitForm = function(){
     const name  = (document.getElementById('cf-name')||{}).value?.trim();

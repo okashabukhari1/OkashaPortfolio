@@ -1,0 +1,158 @@
+{
+    "projects": [
+        {
+            "id": "picnic-games",
+            "title": "Picnic Games",
+            "category": "HTML, CSS, JavaScript",
+            "image": "p_images/PicnicGames_Image.png",
+            "heroImage": "p_images/PicnicGames_Image.png",
+            "shortDescription": "Fun indoor and outdoor games discovery platform.",
+            "fullDescription": "A responsive website helping users discover picnic and party games for families, kids, and groups. Includes game categories, instructions, interactive browsing, and modern UI design. This project showcases vanilla HTML, CSS, and JavaScript skills with a focus on responsive design and interactive elements.",
+            "technologies": [
+                "HTML5",
+                "CSS3",
+                "JavaScript",
+                "Bootstrap"
+            ],
+            "features": [
+                "Game Categories & Filtering",
+                "Responsive Design",
+                "Interactive UI Elements",
+                "CSS Animations",
+                "Search Functionality"
+            ],
+            "liveUrl": "https://okashabukhari1.github.io/Picnic-Games/",
+            "githubUrl": "https://github.com/okashabukhari1",
+            "status": "Live"
+        },
+        {
+            "id": "furevercare",
+            "title": "FureverCare",
+            "category": "React, Node.js, Tailwind CSS",
+            "image": "p_images/FurEver_image.png",
+            "heroImage": "p_images/FurEver_image.png",
+            "shortDescription": "Pet adoption and pet care platform.",
+            "fullDescription": "A modern pet adoption platform built with React and Node.js. Users can browse available pets, manage their pet information, explore pet care resources, and connect with other pet enthusiasts. Features a clean and intuitive user interface powered by Tailwind CSS for rapid development and responsive design.",
+            "technologies": [
+                "React",
+                "Node.js",
+                "Tailwind CSS",
+                "MongoDB",
+                "REST API"
+            ],
+            "features": [
+                "Pet Listings & Search",
+                "User Authentication",
+                "Responsive Design",
+                "Modern UI Components",
+                "Fast Performance"
+            ],
+            "liveUrl": "https://furevercare-rosy.vercel.app/",
+            "githubUrl": "https://github.com/okashabukhari1",
+            "status": "Live"
+        },
+        {
+            "id": "travel-smart",
+            "title": "Travel Smart",
+            "category": "React, Node.js, Tailwind CSS",
+            "image": "p_images/TravelSmart_image.png",
+            "heroImage": "p_images/TravelSmart_image.png",
+            "shortDescription": "Travel and tourism platform.",
+            "fullDescription": "An interactive travel guide platform built with React and Node.js. Help users discover destinations, explore tour packages, plan travel itineraries, and make informed decisions about their next adventure. Built with modern web technologies and optimized for performance and user experience.",
+            "technologies": [
+                "React",
+                "Node.js",
+                "Tailwind CSS",
+                "JavaScript",
+                "Vercel"
+            ],
+            "features": [
+                "Tour Package Listings",
+                "Destination Exploration",
+                "Interactive Trip Planner",
+                "Responsive Design",
+                "Modern UI"
+            ],
+            "liveUrl": "https://travel-smart-eta.vercel.app/",
+            "githubUrl": "https://github.com/okashabukhari1",
+            "status": "Live"
+        },
+        {
+            "id": "head-tail",
+            "title": "Head Tail Game",
+            "category": "HTML, CSS, JavaScript",
+            "image": "p_images/HeadTail_image.png",
+            "heroImage": "p_images/HeadTail_image.png",
+            "shortDescription": "Browser-based guessing game.",
+            "fullDescription": "A simple but engaging game built with vanilla JavaScript. Players choose Head or Tail and compete against the computer, with scores tracked throughout the game session. Features a high score system, responsive layout, and interactive UI elements that respond to user actions.",
+            "technologies": [
+                "HTML5",
+                "CSS3",
+                "JavaScript",
+                "Game Logic"
+            ],
+            "features": [
+                "Score Tracking System",
+                "Game Logic & AI",
+                "Responsive Layout",
+                "Interactive UI",
+                "High Score Counter"
+            ],
+            "liveUrl": "https://okashabukhari1.github.io/HeadTail/",
+            "githubUrl": "https://github.com/okashabukhari1",
+            "status": "Live"
+        },
+        {
+            "id": "nizaliah",
+            "title": "Nizaliah",
+            "category": "E-Commerce, Cosmetics, Perfume Brand",
+            "image": "p_images/NizaliahPerfume_image.png",
+            "heroImage": "p_images/NizaliahPerfume_image.png",
+            "shortDescription": "Luxury perfume and cosmetics brand website.",
+            "fullDescription": "A premium e-commerce brand website for Nizaliah, focused on perfumes, cosmetics, and beauty products. Features elegant luxury branding, sophisticated UI design, product showcases, and a modern shopping experience. Currently in development with planned payment integration and inventory management.",
+            "technologies": [
+                "HTML5",
+                "CSS3",
+                "JavaScript",
+                "Laravel",
+                "E-Commerce"
+            ],
+            "features": [
+                "Luxury Branding & Design",
+                "Product Catalog",
+                "Responsive Design",
+                "Modern UI Components",
+                "Shopping Experience"
+            ],
+            "liveUrl": "#",
+            "githubUrl": "https://github.com/okashabukhari1",
+            "status": "In Development"
+        },
+        {
+            "id": "madrasa-darul-falah",
+            "title": "Madrasa Dar-ul-Falah",
+            "category": "Educational Website",
+            "image": "p_images/MadrasaDarUlFalah_image.png",
+            "heroImage": "p_images/MadrasaDarUlFalah_image.png",
+            "shortDescription": "Islamic educational institution website.",
+            "fullDescription": "A modern, professional website developed for Madrasa Dar-ul-Falah, an Islamic educational institution. Includes comprehensive information about programs, admission procedures, events, courses offered, student achievements, and contact details. Designed with cultural sensitivity and professional presentation in mind.",
+            "technologies": [
+                "HTML5",
+                "CSS3",
+                "JavaScript",
+                "Laravel",
+                "Responsive Design"
+            ],
+            "features": [
+                "Course Information Pages",
+                "Admissions Section",
+                "Events Calendar",
+                "Responsive Design",
+                "Islamic Theme"
+            ],
+            "liveUrl": "#",
+            "githubUrl": "https://github.com/okashabukhari1",
+            "status": "Completed"
+        }
+    ]
+}

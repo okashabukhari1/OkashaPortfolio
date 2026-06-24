@@ -140,6 +140,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 22px;
+      auto-flow: dense;
     }
 
     /* Featured row — first project spans 2 cols */
@@ -148,7 +149,7 @@
     }
 
     .proj-card {
-      cursor: default;
+      cursor: pointer;
     }
 
     .proj-visual {
@@ -169,8 +170,20 @@
       background: linear-gradient(135deg, #1c1c1e, #2d1b69, #4c1d95);
     }
 
+    .pv3 {
+      background: linear-gradient(135deg, #1a4d3a, #2d5f4a, #3a7a5a);
+    }
+
     .pv4 {
       background: linear-gradient(135deg, #7c3aed, #a855f7, #c084fc);
+    }
+
+    .pv5 {
+      background: linear-gradient(135deg, #6b2d3a, #8b3d4a, #a8445a);
+    }
+
+    .pv6 {
+      background: linear-gradient(135deg, #2d4a5e, #3d5a7e, #4d6a9e);
     }
 
     .pv-icon {
@@ -229,6 +242,37 @@
     .proj-status i {
       font-size: .55rem;
       color: #4ade80;
+    }
+
+    /* Status badge variants */
+    .proj-status.status-live {
+      background: rgba(74, 222, 128, .12);
+      border-color: rgba(74, 222, 128, .3);
+      color: #4ade80;
+    }
+
+    .proj-status.status-live i {
+      color: #22c55e;
+    }
+
+    .proj-status.status-dev {
+      background: rgba(250, 204, 21, .12);
+      border-color: rgba(250, 204, 21, .3);
+      color: #facc15;
+    }
+
+    .proj-status.status-dev i {
+      color: #eab308;
+    }
+
+    .proj-status.status-done {
+      background: rgba(96, 165, 250, .12);
+      border-color: rgba(96, 165, 250, .3);
+      color: #60a5fa;
+    }
+
+    .proj-status.status-done i {
+      color: #3b82f6;
     }
 
     .proj-body {
@@ -356,6 +400,16 @@
       flex-shrink: 0;
     }
 
+    @media(max-width:1100px) {
+      .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .proj-card-full {
+        grid-column: span 2;
+      }
+    }
+
     @media(max-width:900px) {
       .projects-grid {
         grid-template-columns: 1fr;
@@ -435,10 +489,10 @@
       <div class="projects-grid" id="projGrid">
 
         <!-- Picnic Games — featured -->
-        <div class="proj-card card proj-card-full reveal" data-cat="html-css js">
+        <div class="proj-card card proj-card-full reveal" data-cat="html-css js" data-id="picnic-games" onclick="window.location.href='project-details.html?id=picnic-games'" role="button" tabindex="0" aria-label="View Picnic Games project details">
           <div class="proj-visual pv1">
             <div class="pv-glow"></div>
-            <div class="proj-status"><i class="bi bi-circle-fill"></i> Live</div>
+            <div class="proj-status status-live"><i class="bi bi-circle-fill"></i> Live</div>
             <img src="p_images/PicnicGames_Image.png"
               alt="Picnic Games — outdoor and indoor games website by Okasha Bukhari" loading="lazy" width="220"
               height="160" class="pv-icon">
@@ -465,10 +519,10 @@
         </div>
 
         <!-- FureverCare -->
-        <div class="proj-card card reveal rd1" data-cat="html-css bootstrap">
+        <div class="proj-card card reveal rd1" data-cat="html-css bootstrap" data-id="furevercare" onclick="window.location.href='project-details.html?id=furevercare'" role="button" tabindex="0" aria-label="View FureverCare project details">
           <div class="proj-visual pv2">
             <div class="pv-glow"></div>
-            <div class="proj-status"><i class="bi bi-circle-fill"></i> Live</div>
+            <div class="proj-status status-live"><i class="bi bi-circle-fill"></i> Live</div>
             <img src="p_images/FurEver_image.png" alt="FureverCare — pet adoption platform by Okasha Bukhari"
               loading="lazy" width="220" height="160" class="pv-icon">
             <div class="pv-bg-label">FUREVER CARE</div>
@@ -492,10 +546,10 @@
         </div>
 
         <!-- Travel Smart -->
-        <div class="proj-card card reveal rd1" data-cat="html-css js">
+        <div class="proj-card card reveal rd1" data-cat="html-css js" data-id="travel-smart" onclick="window.location.href='project-details.html?id=travel-smart'" role="button" tabindex="0" aria-label="View Travel Smart project details">
           <div class="proj-visual pv3">
             <div class="pv-glow"></div>
-            <div class="proj-status"><i class="bi bi-circle-fill"></i> Live</div>
+            <div class="proj-status status-live"><i class="bi bi-circle-fill"></i> Live</div>
             <img src="p_images/TravelSmart_image.png" alt="Travel Smart — interactive travel guide by Okasha Bukhari"
               loading="lazy" width="220" height="160" class="pv-icon">
             <div class="pv-bg-label">TRAVEL SMART</div>
@@ -520,10 +574,10 @@
         </div>
 
         <!-- Head Tail Game -->
-        <div class="proj-card card reveal rd2" data-cat="html-css js">
+        <div class="proj-card card reveal rd2" data-cat="html-css js" data-id="head-tail" onclick="window.location.href='project-details.html?id=head-tail'" role="button" tabindex="0" aria-label="View Head Tail Game project details">
           <div class="proj-visual pv4">
             <div class="pv-glow"></div>
-            <div class="proj-status"><i class="bi bi-circle-fill"></i> Live</div>
+            <div class="proj-status status-live"><i class="bi bi-circle-fill"></i> Live</div>
             <img src="p_images/HeadTail_image.png" alt="Head Tail — Head vs Tail guessing game by Okasha Bukhari"
               loading="lazy" width="220" height="160" class="pv-icon">
             <div class="pv-bg-label">HEAD TAIL GAME</div>
@@ -536,12 +590,62 @@
               computer, and track your score across rounds. Features a high score system and a clean responsive
               interface.</p>
             <div class="proj-foot">
-              <div class="proj-tags"><span class="ptag">React</span><span class="ptag">Node.js</span><span
-                  class="ptag">Tailwind</span></div>
+              <div class="proj-tags"><span class="ptag">HTML5</span><span class="ptag">CSS3</span><span
+                  class="ptag">JavaScript</span></div>
               <div class="proj-links">
                 <a href="https://okashabukhari1.github.io/HeadTail/" target="_blank" rel="noopener noreferrer"
                   class="proj-link-btn" aria-label="View Head Tail game live site" title="View Live"><i
                     class="bi bi-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nizaliah -->
+        <div class="proj-card card reveal rd3" data-cat="bootstrap" data-id="nizaliah" onclick="window.location.href='project-details.html?id=nizaliah'" role="button" tabindex="0" aria-label="View Nizaliah project details">
+          <div class="proj-visual pv5">
+            <div class="pv-glow"></div>
+            <div class="proj-status status-dev"><i class="bi bi-hourglass-split"></i> In Development</div>
+            <img src="p_images/NizaliahPerfume_image.png" alt="Nizaliah — luxury perfume and cosmetics brand by Okasha Bukhari"
+              loading="lazy" width="220" height="160" class="pv-icon">
+            <div class="pv-bg-label">NIZALIAH</div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-cat"><i class="bi bi-shop"></i> E-Commerce &middot; <i class="bi bi-laravel"></i> Laravel</div>
+            <h3 class="proj-title">Nizaliah</h3>
+            <p class="proj-desc">Luxury perfume and cosmetics brand website. Premium e-commerce platform with elegant branding, product catalog, and modern shopping experience.</p>
+            <div class="proj-foot">
+              <div class="proj-tags"><span class="ptag">HTML5</span><span class="ptag">CSS3</span><span
+                  class="ptag">Laravel</span></div>
+              <div class="proj-links">
+                <a href="https://github.com/okashabukhari1" target="_blank" rel="noopener noreferrer"
+                  class="proj-link-btn" aria-label="View Nizaliah on GitHub" title="View GitHub"><i
+                    class="bi bi-github"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Madrasa Dar-ul-Falah -->
+        <div class="proj-card card reveal rd4" data-cat="bootstrap" data-id="madrasa-darul-falah" onclick="window.location.href='project-details.html?id=madrasa-darul-falah'" role="button" tabindex="0" aria-label="View Madrasa Dar-ul-Falah project details">
+          <div class="proj-visual pv6">
+            <div class="pv-glow"></div>
+            <div class="proj-status status-done"><i class="bi bi-check-circle-fill"></i> Completed</div>
+            <img src="p_images/MadrasaDarUlFalah_image.png" alt="Madrasa Dar-ul-Falah — Islamic educational institution website by Okasha Bukhari"
+              loading="lazy" width="220" height="160" class="pv-icon">
+            <div class="pv-bg-label">MADRASA</div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-cat"><i class="bi bi-book"></i> Educational &middot; <i class="bi bi-laravel"></i> Laravel</div>
+            <h3 class="proj-title">Madrasa Dar-ul-Falah</h3>
+            <p class="proj-desc">Modern website for Islamic educational institution. Includes course information, admissions section, events calendar, and comprehensive student resources.</p>
+            <div class="proj-foot">
+              <div class="proj-tags"><span class="ptag">HTML5</span><span class="ptag">CSS3</span><span
+                  class="ptag">Laravel</span></div>
+              <div class="proj-links">
+                <a href="https://github.com/okashabukhari1" target="_blank" rel="noopener noreferrer"
+                  class="proj-link-btn" aria-label="View Madrasa Dar-ul-Falah on GitHub" title="View GitHub"><i
+                    class="bi bi-github"></i></a>
               </div>
             </div>
           </div>
