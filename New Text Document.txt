@@ -1,0 +1,13 @@
+update this 
+
+picnic-games develop on HTML, CSS and JS.
+FureverCare develop on React, tilwind css
+Travel Smart develop on React and Tilwind CSS
+Head Tail Game develop on HTML, CSS and JS.
+Nizaliah develop on Laravel.
+Madrasa Dar-ul-Falah develop on Laravel
+
+
+add [https://nzaliah.vercel.app/](https://nzaliah.vercel.app/) baesd on animations and scroll effect
+add [https://ebike-tau.vercel.app/](https://ebike-tau.vercel.app/) baesd on animations and scroll effect and 3d model assemble and deassemble on scrolling.
+check this [https://github.com/okashabukhari1/JamesThewProject](https://github.com/okashabukhari1/JamesThewProject) develop on .NET 

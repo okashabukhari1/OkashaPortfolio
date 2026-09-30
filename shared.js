@@ -64,20 +64,46 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.reveal').forEach(el=>rio.observe(el));
 
   /* ── Counter animation ─────────────────────────────────────── */
+  let projectCountPromise;
   const cio = new IntersectionObserver(entries=>{
     entries.forEach(e=>{
-      if(e.isIntersecting && !e.target.dataset.done){
-        e.target.dataset.done='1';
-        const el=e.target, target=+el.dataset.count, suf=el.dataset.suffix||'';
-        const dur=1400, t0=performance.now();
-        (function tick(now){
-          const p=Math.min((now-t0)/dur,1), v=Math.floor((1-Math.pow(1-p,4))*target);
-          el.textContent=v+suf; if(p<1) requestAnimationFrame(tick);
-        })(t0);
+      const el=e.target;
+      if(e.isIntersecting && !el.dataset.done && !el.dataset.loading){
+        el.dataset.loading='1';
+        const count = el.dataset.countSource
+          ? (projectCountPromise ||= fetch(el.dataset.countSource).then(response=>{
+              if(!response.ok) throw new Error('Failed to load project count');
+              return response.json();
+            }).then(data=>data.projects.filter(project=>['live','completed'].includes(project.status.toLowerCase())).length))
+          : Promise.resolve(+el.dataset.count);
+        count.then(target=>{
+          el.dataset.count=target;
+          el.dataset.done='1';
+          delete el.dataset.loading;
+          const suf=el.dataset.suffix||'';
+          const dur=1400, t0=performance.now();
+          (function tick(now){
+            const p=Math.min((now-t0)/dur,1), v=Math.floor((1-Math.pow(1-p,4))*target);
+            el.textContent=v+suf; if(p<1) requestAnimationFrame(tick);
+          })(t0);
+        }).catch(error=>{
+          delete el.dataset.loading;
+          console.error('Error loading project count:', error);
+        });
       }
     });
   },{threshold:.5});
   document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+  document.querySelectorAll('[data-count-source]').forEach(el=>{
+    projectCountPromise ||= fetch(el.dataset.countSource).then(response=>{
+      if(!response.ok) throw new Error('Failed to load project count');
+      return response.json();
+    }).then(data=>data.projects.filter(project=>['live','completed'].includes(project.status.toLowerCase())).length);
+    projectCountPromise.then(target=>{
+      el.dataset.count=target;
+      if(!el.dataset.done) el.textContent=target+(el.dataset.suffix||'');
+    }).catch(error=>console.error('Error loading project count:',error));
+  });
 
   /* ── Skill bars ────────────────────────────────────────────── */
   const sio = new IntersectionObserver(entries=>{
@@ -106,11 +132,9 @@ document.addEventListener('DOMContentLoaded', () => {
   window.filterProj = function(btn,cat){
     document.querySelectorAll('.pf-btn').forEach(b=>b.classList.remove('active'));
     btn.classList.add('active');
-    document.querySelectorAll('.proj-card').forEach(c=>{
+    document.querySelectorAll('#projGrid .proj-card').forEach(c=>{
       const show = cat==='all' || (c.dataset.cat||'').split(' ').includes(cat);
-      c.style.transition='opacity .3s,transform .3s';
-      c.style.opacity = show?'1':'0.08';
-      c.style.pointerEvents = show?'auto':'none';
+      c.style.display = show ? '' : 'none';
     });
   };
 
@@ -123,23 +147,5 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-
-  /* ── Contact form ──────────────────────────────────────────── */
-  window.submitForm = function(){
-    const name  = (document.getElementById('cf-name')||{}).value?.trim();
-    const email = (document.getElementById('cf-email')||{}).value?.trim();
-    const msg   = (document.getElementById('cf-msg')||{}).value?.trim();
-    const status = document.getElementById('cf-status');
-    if(!status) return;
-    if(!name||!email||!msg){ status.style.color='#ff6b6b'; status.textContent='Please fill in name, email & message.'; return; }
-    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ status.style.color='#ff6b6b'; status.textContent='Invalid email address.'; return; }
-    const btn = document.querySelector('.cf-submit');
-    btn.textContent='Sending…'; btn.disabled=true;
-    setTimeout(()=>{
-      status.style.color='var(--cyan)'; status.textContent='Message sent! I\'ll reply within 24 hrs.';
-      btn.textContent='Sent!'; btn.style.opacity='.6';
-      ['cf-name','cf-email','cf-msg'].forEach(id=>{ const el=document.getElementById(id); if(el) el.value=''; });
-    },1200);
-  };
 
 });
