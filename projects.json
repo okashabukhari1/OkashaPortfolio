@@ -225,8 +225,8 @@
       "id": "james-thew",
       "title": "James Thew Recipe Platform",
       "category": ".NET Web Application",
-      "image": "p_images/JamesThew_image.png",
-      "heroImage": "p_images/JamesThew_image.png",
+      "image": "p_images/JamesThew_image.jpg",
+      "heroImage": "p_images/JamesThew_image.jpg",
       "shortDescription": "Recipe and culinary platform developed with .NET.",
       "fullDescription": "A .NET-based web application focused on recipe discovery and culinary content. The project demonstrates structured application development within the Microsoft .NET ecosystem and includes a dedicated Visual Studio solution and application project.",
       "technologies": [
